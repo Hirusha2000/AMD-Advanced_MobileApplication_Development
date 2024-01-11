@@ -1,43 +1,59 @@
 
 import React, {useState}from 'react';
 import { Alert, TextInput, View } from 'react-native';
-import { Text,Button } from 'react-native';
+import { Text,Button,StyleSheet } from 'react-native';
 
 
 
 function App(): React.JSX.Element {
 
-var textValue='';
 
+var Student={
 
-function displayValue(){
-console.log("Text value= "+textValue);
-Alert.alert("Text says",textValue);
+  name:'jeny',
+  age:6,
+  school:'Rippon college',
+  eat:function(){
+console.log("Eating");
 
+  },
+  play:function(){
+    console.log("Play some Games")
+  }
 
 }
 
-function onTextChange(v:string){
-textValue=v;
 
+function makeStudentEat(){
+  Student.eat();
 }
 
 return (
-  <View style={{alignItems:'center'}}>
+  <View style={{alignItems:'center' ,
+  backgroundColor:'white',
+  flex:1,
+  justifyContent:'center' }}>
   
-<TextInput style={{
-width:300, height:50,
-borderRadius:30,
-backgroundColor:'black',
-color:'white',
-marginVertical:20,
 
-}} onChangeText={onTextChange}/>
-<Button title='CliclMe'  onPress={displayValue}/>
+  <Text style={{fontSize:30,
+  color:'red'
+  
+  }}>{Student.name}</Text>
+
+
+
+<Text style={{fontSize:30,
+  color:'red'
+  
+  }}>{Student.school}</Text>
+
+
+<Button title='eat' onPress={makeStudentEat}/>
 
   </View>
   );
 }
+
 
 
 export default App;
