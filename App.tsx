@@ -11,6 +11,7 @@ function App(): React.JSX.Element {
  
   return (
   <View style={{alignItems:'center'}}>
+   <CustomText  fSize={60} a={'Hello'} b={'world'}/>
     <CustomLabel>Welcome</CustomLabel>
  
   </View>
@@ -18,5 +19,10 @@ function App(): React.JSX.Element {
 }
 
 
+function CustomText(props:any){
+  return(
+    <Text style={{ fontSize:props.fSize}}> {props.a} {props.b} </Text>
+  );
+}
 
 export default App;
