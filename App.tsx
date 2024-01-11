@@ -2,7 +2,8 @@
 import React from 'react';
 import { View } from 'react-native';
 import { Text,Button } from 'react-native';
-import MyComponents from './src/components/MyComponents';
+import CustomLabel from './src/components/CustomLabel';
+
 
 
 
@@ -10,7 +11,8 @@ function App(): React.JSX.Element {
  
   return (
   <View style={{alignItems:'center'}}>
-    <MyComponents/>
+    <CustomLabel>Welcome</CustomLabel>
+ 
   </View>
   );
 }
