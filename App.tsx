@@ -8,25 +8,28 @@ import { Text,Button,StyleSheet } from 'react-native';
 function App(): React.JSX.Element {
 
 
-  class Calculator{
-number1:number=0;
-number2:number=0;
-addition(){
-  console.log(this.number1+this.number2);
-}
+  interface Student{
+name:string;
+age:number;
+university:string;
   }
 
+  var student_1:Student={
+    name:'Hirusha',
+    age:24,
+    university:'IJSE',
+    
+  }
 
-  var cla1=new Calculator();
-cla1.number1=30;
-cla1.number2=40;
-cla1.addition();
+  var text='abc';
 
-var cal2=new Calculator();
-cal2.number1=40;
-cal2.number2=20;
-cal2.addition(); 
-  
+function printData(std:Student){
+console.log(std.name);
+console.log(std.age);
+console.log(std.university);
+}
+
+
 
 return (
   <View style={{alignItems:'center' ,
@@ -34,7 +37,7 @@ return (
   flex:1,
   justifyContent:'center' }}>
   
-
+  <Button title='print' onPress={ ()=>printData(student_1)}/>
   </View>
   );
 }
