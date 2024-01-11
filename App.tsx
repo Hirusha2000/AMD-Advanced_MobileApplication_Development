@@ -14,6 +14,9 @@ function App(): React.JSX.Element {
 return (
  
 <View style={{backgroundColor:'white',flex:1}}>
+
+<View style={{flex:1,backgroundColor:'black',justifyContent:'space-around'}}>
+
 <View style={{width:100,height:100,backgroundColor:'red',
 alignSelf:'flex-start'
 
@@ -22,20 +25,29 @@ alignSelf:'flex-start'
   
 </View>
 
-<View style={{width:100,height:100,backgroundColor:'green',
-alignSelf:'center'
+
+<View style={{width:100,height:100,backgroundColor:'blue',
+alignSelf:'flex-start'
 
 
 }}>
   
 </View>
+
 <View style={{width:100,height:100,backgroundColor:'yellow',
-alignSelf:'flex-end'
+alignSelf:'flex-start'
 
 
 }}>
   
 </View>
+
+
+
+</View>
+
+
+
 </View>
 
   );
