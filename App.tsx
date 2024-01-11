@@ -7,27 +7,30 @@ import CustomLabel from './src/components/CustomLabel';
 
 function App(): React.JSX.Element {
 
-  console.log("App Component is Rendered.");
+var x=0;
+const [y,setY]=useState(0);
 
-  const [count,setCount]=useState(0);
+function changeX(){
 
-  function changeCount(){
-    setCount(count+1);
-
-  }
-
-  return (
-  <View style={{alignItems:'center'}}>
-<Text style={{fontSize:30}}>Count is :{count}</Text>
-<Button title='Change Count' onPress={changeCount}/>
-  </View>
-  );
+x=x+1;
+console.log(x);
 }
 
 
+function changeY()
+{
+  setY(y+1);
+}  
 
+return (
+  <View style={{alignItems:'center'}}>
+    <Text style={{fontSize:30}}>X and Y : {x}{y}</Text>
+    <Button title='Increment X' onPress={changeX}/>
+    <Button title='Increment y' onPress={changeY}/>
 
-
+  </View>
+  );
+}
 
 
 export default App;
