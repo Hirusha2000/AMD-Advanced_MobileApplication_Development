@@ -23,6 +23,19 @@ console.log("Eating");
 
 }
 
+var Cat={
+name:'kity',
+age:2,
+sleep:function(){
+  console.log("sleeping");
+}
+}
+
+function makeCatSleep(){
+  Cat.sleep();
+}
+
+
 
 function makeStudentEat(){
   Student.eat();
@@ -38,18 +51,18 @@ return (
   <Text style={{fontSize:30,
   color:'red'
   
-  }}>{Student.name}</Text>
+  }}>{Cat.name}</Text>
 
 
 
 <Text style={{fontSize:30,
   color:'red'
   
-  }}>{Student.school}</Text>
+  }}>{Cat.age}</Text>
 
 
-<Button title='eat' onPress={makeStudentEat}/>
-
+{/* <Button title='eat' onPress={makeStudentEat}/> */}
+<Button title='sleep' onPress={makeCatSleep}/>
   </View>
   );
 }
