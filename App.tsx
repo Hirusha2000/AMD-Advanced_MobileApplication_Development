@@ -13,46 +13,22 @@ function App(): React.JSX.Element {
 
 return (
  
-<View style={{backgroundColor:'white',flex:1}}>
-
-<View style={{flex:1,backgroundColor:'black',justifyContent:'space-around'}}>
-
-<View style={{width:100,height:100,backgroundColor:'red',
-alignSelf:'flex-start'
-
-
-}}>
-  
-</View>
-
-
-<View style={{width:100,height:100,backgroundColor:'blue',
-alignSelf:'flex-start'
-
-
-}}>
-  
-</View>
-
-<View style={{width:100,height:100,backgroundColor:'yellow',
-alignSelf:'flex-start'
-
-
-}}>
-  
-</View>
-
-
-
-</View>
-
-
-
+<View style={sty.container }>
+<View style={{width:100,height:100,backgroundColor:'blue'}}></View>
+<View style={{width:100,height:100,backgroundColor:'green',position:'absolute',margin:20,
+elevation:1,borderRadius:30,borderStyle:'dotted',borderWidth:5,borderColor:'red'}}></View>
 </View>
 
   );
 }
 
 
+const sty=StyleSheet.create({
+container:{
+  flex:1,
+  backgroundColor:'white'
+}
+
+})
 
 export default App;
