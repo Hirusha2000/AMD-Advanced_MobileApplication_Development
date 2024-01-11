@@ -1,32 +1,39 @@
 
 import React, {useState}from 'react';
-import { TextInput, View } from 'react-native';
+import { Alert, TextInput, View } from 'react-native';
 import { Text,Button } from 'react-native';
-import CustomLabel from './src/components/CustomLabel';
+
 
 
 function App(): React.JSX.Element {
 
-var x=0;
-const [y,setY]=useState(0);
+var textValue='';
 
-function changeX(){
 
-x=x+1;
-console.log(x);
+function displayValue(){
+console.log("Text value= "+textValue);
+Alert.alert("Text says",textValue);
+
+
 }
 
+function onTextChange(v:string){
+textValue=v;
 
-function changeY()
-{
-  setY(y+1);
-}  
+}
 
 return (
   <View style={{alignItems:'center'}}>
-    <Text style={{fontSize:30}}>X and Y : {x}{y}</Text>
-    <Button title='Increment X' onPress={changeX}/>
-    <Button title='Increment y' onPress={changeY}/>
+  
+<TextInput style={{
+width:300, height:50,
+borderRadius:30,
+backgroundColor:'black',
+color:'white',
+marginVertical:20,
+
+}} onChangeText={onTextChange}/>
+<Button title='CliclMe'  onPress={displayValue}/>
 
   </View>
   );
