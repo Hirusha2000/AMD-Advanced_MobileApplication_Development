@@ -13,24 +13,56 @@ function App(): React.JSX.Element {
 
 return (
  
-<View style={{backgroundColor:'yellow',flex:1, flexDirection:'row'}}>
-<View style={{backgroundColor:'green',flex:1}}>
+<View style={{backgroundColor:'yellow',flex:1, flexDirection:'column'}}>
+
+<View style={{backgroundColor:'black',flex:2}}>
 
 
 </View>
-<View style={{backgroundColor:'yellow',flex:4}}>
+<View style={{backgroundColor:'red',flex:3 ,flexDirection:'row'}}>
+
+<View style={{backgroundColor:'red',flex:1}}>
+
+</View>
+
+<View style={{backgroundColor:'red',flex:1,flexDirection:'column'}}>
+
+
+<View style={{backgroundColor:'green',flex:1,flexDirection:'row'}}>
+
+<View style={{backgroundColor:'pink',flex:1}}>
+
+</View>
+<View style={{backgroundColor:'orange',flex:1}}>
+
+</View>
+
+<View style={{backgroundColor:'purple',flex:1}}>
+
+</View>
+
+
 
 
 </View>
 
-<View style={{backgroundColor:'red',flex:2}}>
+<View style={{backgroundColor:'yellow',flex:1}}>
 
+
+
+
+
+</View>
+</View>
 
 </View>
 
 
 
 </View>
+
+
+
 
 
   );
