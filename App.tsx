@@ -1,34 +1,40 @@
 
-import React, {useState}from 'react';
-import { Alert, TextInput, View } from 'react-native';
-import { Text,Button,StyleSheet } from 'react-native';
 
-
+import React, { useState } from "react";
+import { Button, SafeAreaView, Text, TextInput, TouchableOpacity } from "react-native";
+import { CustomTitle } from "./src/components/CustomTitle.tsx";
+// import styles, { styles2 } from "./src/styles/styles";
+// import { styles, styles2 } from "./src/styles/styles";
 
 function App(): React.JSX.Element {
 
+  const [title, setTitle] = useState('IJSE');
 
+  return (
+      <SafeAreaView>
+        <TextInput
+            style={{borderColor: 'blue', borderWidth: 2, margin: 10}}
+            value={title}
+            onChange={(val) => {
+              setTitle(val.nativeEvent.text);
+            }}
+        />
 
+        <TouchableOpacity
+            onPress={(val) => {
+              setTitle('IJSE');
+            }}
+            style={{backgroundColor: 'blue', padding: 20}}>
+          <Text>Set IJSE to Title</Text>
+        </TouchableOpacity>
 
-
-return (
- 
-<View style={sty.container }>
-<View style={{width:100,height:100,backgroundColor:'blue'}}></View>
-<View style={{width:100,height:100,backgroundColor:'green',position:'absolute',margin:20,
-elevation:1,borderRadius:30,borderStyle:'dotted',borderWidth:5,borderColor:'red'}}></View>
-</View>
-
+        <CustomTitle title={title} subTitle={'this is sub 1'}/>
+        <CustomTitle title={'Hello Galle'} subTitle={'this is sub 2'} marginBottom={55}/>
+        <CustomTitle title={'Hello Panadura'} subTitle={'this is sub 3'}/>
+        <CustomTitle title={'Hello Jaffna'} subTitle={'this is sub 4'}/>
+      </SafeAreaView>
   );
+
 }
-
-
-const sty=StyleSheet.create({
-container:{
-  flex:1,
-  backgroundColor:'white'
-}
-
-})
 
 export default App;
